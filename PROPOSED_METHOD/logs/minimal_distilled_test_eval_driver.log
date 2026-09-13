@@ -1,0 +1,6 @@
+{"checkpoint": "minimal_distilled_seed123", "mean_cost": 11226.631520507815}
+{"checkpoint": "minimal_distilled_seed2026", "mean_cost": 11225.118390625}
+{"checkpoint": "minimal_distilled_seed42", "mean_cost": 11231.956405273433}
+{"checkpoint": "minimal_distilled_seed7", "mean_cost": 11227.31728515625}
+{"checkpoint": "minimal_distilled_seed777", "mean_cost": 11223.644957031249}
+ALL_DONE

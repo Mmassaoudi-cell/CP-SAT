@@ -1,0 +1,7 @@
+RUN a2c
+DONE a2c
+RUN mlp_ppo
+DONE mlp_ppo
+RUN dqn
+DONE dqn
+ALL_BENCHMARK_TRAINING_COMPLETE

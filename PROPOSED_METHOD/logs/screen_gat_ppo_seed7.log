@@ -1,0 +1,4 @@
+{"candidate": "gat_ppo", "episodes": 192, "update": 10, "mean_system_cost_100": 12355.685350585938}
+{"candidate": "gat_ppo", "episodes": 400, "update": 20, "mean_system_cost_100": 12387.334587890622}
+{"candidate": "gat_ppo", "episodes": 608, "update": 30, "mean_system_cost_100": 12332.369695312502}
+{"checkpoint": "PROPOSED_METHOD\\results\\screen_gat_ppo_seed7.pt", "episodes": 600, "updates": 30, "n_params": 198434, "device": "cuda"}

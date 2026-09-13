@@ -1,0 +1,2 @@
+{"out": "ANALYSIS\\results\\robustness_final_distilled_seed2026.csv", "rows": 300, "summary": {"bandwidth_dropout_20pct": {"mean": 11248.188326909729, "std": 192.36182346414589}, "bandwidth_dropout_50pct": {"mean": 11248.399609832577, "std": 192.7787281523225}, "cef_noise_high": {"mean": 11269.49188091261, "std": 196.1703182697664}, "clean": {"mean": 11248.532669048705, "std": 193.02205565209556}, "price_noise_high": {"mean": 11210.106760227223, "std": 260.2609097535578}, "price_noise_low": {"mean": 11243.302408969863, "std": 204.41398832457173}}}
+DONE_ROBUSTNESS_DFPS

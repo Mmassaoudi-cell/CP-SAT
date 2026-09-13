@@ -1,0 +1,53 @@
+experiment:
+  name: proposed_method_candidates
+  horizon: 96
+  interval_hours: 0.25
+  n_datacenters: 3
+  workloads: 10
+  subtasks: 50
+  train_scenarios: 600
+  validation_scenarios: 100
+  test_scenarios: 100
+  train_seed_start: 1000
+  validation_seed_start: 2000
+  test_seed_start: 3000
+environment:
+  dc_capacity_kw: [1800.0, 1800.0, 1800.0]
+  dc_base_kw: [240.0, 240.0, 240.0]
+  bandwidth_capacity_mbps: [6500.0, 6500.0, 6500.0]
+  carbon_price_per_kg: 0.10
+  carbon_quota_kg: 9500.0  # deliberately tightened vs. source reproduction's 13240 kg: at 13240 the quota
+  # never binds (validation-split emissions run ~10400-10900 kg, see REPRODUCTION_REPORT.md), so the
+  # PID-Lagrangian carbon term in Candidates 3/4 would stay at 0 and never be exercised. Decided before
+  # candidate screening, from validation-split diagnostics only (not from any test-set result).
+  remote_migration_slots: 1
+ppo:
+  actor_learning_rate: 0.0001
+  critic_learning_rate: 0.0001
+  discount_factor: 0.99
+  clip_range: 0.2
+  gae_lambda: 0.9
+  minibatch_size: 128
+  training_episodes: 3000
+  hidden_size: 128
+  attention_heads: 8
+  gradient_clip: 0.5
+  entropy_coefficient: 0.2
+  value_coefficient: 0.5
+  update_epochs: 4
+  parallel_envs: 16
+  rollout_steps: 64
+  seed: 2026
+frontier:
+  frontier_max: 16
+lagrangian:
+  # PID acts on a QUOTA-NORMALIZED emissions error, (emissions - quota) / quota (dimensionless,
+  # typically ~0.05-0.15 in this environment), not raw kg -- an earlier raw-kg version of this
+  # config (kp=0.02, lambda_max=5.0) made the controller saturate at lambda_max from episode 0 and
+  # stay pinned there for the entire training run (verified via training-log carbon_lambda trace),
+  # degenerating into a constant maximal penalty rather than a proportional controller. Fixed before
+  # final training using validation/training-log diagnostics only.
+  kp: 3.0
+  ki: 0.3
+  kd: 0.0
+  lambda_max: 1.5

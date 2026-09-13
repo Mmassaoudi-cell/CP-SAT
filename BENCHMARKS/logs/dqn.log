@@ -1,0 +1,8 @@
+{"algorithm": "dqn", "episodes": 200, "mean_system_cost_100": 12046.16943359375}
+{"algorithm": "dqn", "episodes": 400, "mean_system_cost_100": 11897.6180546875}
+{"algorithm": "dqn", "episodes": 600, "mean_system_cost_100": 11744.546683593748}
+{"algorithm": "dqn", "episodes": 800, "mean_system_cost_100": 11706.605330078128}
+{"algorithm": "dqn", "episodes": 1000, "mean_system_cost_100": 11537.272248046873}
+{"algorithm": "dqn", "episodes": 1200, "mean_system_cost_100": 11451.534857421873}
+{"algorithm": "dqn", "episodes": 1400, "mean_system_cost_100": 11326.491782226563}
+{"checkpoint": "BENCHMARKS\\results\\dqn_seed2026_1500ep.pt", "episodes": 1500, "n_params": 135169, "device": "cuda"}

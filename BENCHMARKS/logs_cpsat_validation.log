@@ -1,0 +1,2 @@
+{"results": "BENCHMARKS\\results\\cpsat_validation_results.csv", "rows": 100, "summary": {"cpsat": {"mean": 10822.074908935954, "std": 192.41038776514569, "count": 100}}}
+DONE_CPSAT_VALIDATION

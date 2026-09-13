@@ -1,0 +1,12 @@
+{"episodes": 192, "update": 10, "mean_system_cost_100": 12006.528788085936}
+{"episodes": 400, "update": 20, "mean_system_cost_100": 12079.094755859374}
+{"episodes": 608, "update": 30, "mean_system_cost_100": 11876.750249023438}
+{"checkpoint": "SOURCE_METHOD_REPRODUCTION\\results\\ppo_attention_600_episodes.pt", "episodes": 600, "device": "cuda"}
+{"episodes": 192, "update": 10, "mean_system_cost_100": 12067.247166992189}
+{"episodes": 400, "update": 20, "mean_system_cost_100": 11997.711544921873}
+{"episodes": 608, "update": 30, "mean_system_cost_100": 12019.64508984375}
+{"checkpoint": "SOURCE_METHOD_REPRODUCTION\\results\\ppo_attention_600_episodes.pt", "episodes": 600, "device": "cuda"}
+{"episodes": 192, "update": 10, "mean_system_cost_100": 11984.781051757813}
+{"episodes": 400, "update": 20, "mean_system_cost_100": 12049.017781249999}
+{"episodes": 608, "update": 30, "mean_system_cost_100": 11993.616018554689}
+{"checkpoint": "SOURCE_METHOD_REPRODUCTION\\results\\ppo_attention_600_episodes.pt", "episodes": 600, "device": "cuda"}

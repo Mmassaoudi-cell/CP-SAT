@@ -1,0 +1,11 @@
+EVAL final_hcbs_ppo_seed123_3000ep candidate=hcbs_ppo
+EVAL final_hcbs_ppo_seed2026_3000ep candidate=hcbs_ppo
+EVAL final_hcbs_ppo_seed42_3000ep candidate=hcbs_ppo
+EVAL final_hcbs_ppo_seed777_3000ep candidate=hcbs_ppo
+EVAL final_hcbs_ppo_seed7_3000ep candidate=hcbs_ppo
+EVAL final_tags_seed123_3000ep candidate=tags
+EVAL final_tags_seed2026_3000ep candidate=tags
+EVAL final_tags_seed42_3000ep candidate=tags
+EVAL final_tags_seed777_3000ep candidate=tags
+EVAL final_tags_seed7_3000ep candidate=tags
+ALL_FINAL_EVAL_COMPLETE

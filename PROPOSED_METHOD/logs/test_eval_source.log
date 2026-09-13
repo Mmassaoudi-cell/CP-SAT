@@ -1,0 +1,1 @@
+{"results": "SOURCE_METHOD_REPRODUCTION\\results\\test_results.csv", "rows": 400, "summary": {"greedy_spatiotemporal": 10870.788977539061, "s1_zero_delay": 12101.970154296874, "s2_single_dc_temporal": 11680.553759765626, "source_ppo_attention": 10883.334965820313}}

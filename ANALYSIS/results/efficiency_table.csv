@@ -1,0 +1,20 @@
+method,family,n_params,decisions_per_episode,training_procedure,training_cost_per_seed_isolated_min,total_cost_5_seeds_isolated_min,mean_decision_latency_ms,notes
+S1_zero_delay,heuristic,0,50,none,0,0,0.5,unmeasured; simple arithmetic
+S2_single_dc,heuristic,0,50,none,0,0,0.5,unmeasured; simple arithmetic
+Greedy,heuristic,0,50,none,0,0,0.5,unmeasured; simple arithmetic
+EDF,heuristic,0,50,none,0,0,0.5,unmeasured; simple arithmetic
+Carbon_Greedy,heuristic,0,50,none,0,0,0.5,unmeasured; simple arithmetic
+HEFT,heuristic,0,~10,none,0,0,0.5,unmeasured; simple arithmetic; frontier-epoch commit order
+Random,heuristic,0,50,none,0,0,0.5,unmeasured; simple arithmetic
+CP-SAT,classical_milp,0,1,per-instance MILP solve; not a deployable trained policy,17.5,1750,17500,per-scenario solve time; not a decision-level latency; not amortizable across scenarios
+Source_PPO,autoregressive_rl,168194,50,3000 episodes on-policy PPO from scratch,40,200,5.57,mandatory benchmark; fully reproduced per REPRODUCTION_REPORT.md
+A2C,autoregressive_rl,168194,50,3000 episodes single-epoch A2C from scratch,40,200,5.76,per-episode cost assumed comparable to source PPO's architecture; not independently isolated-timed
+MLP-PPO_no_attn,autoregressive_rl,102146,50,3000 episodes PPO from scratch; no attention,40,200,5.19,per-episode cost assumed comparable to source PPO's architecture; not independently isolated-timed
+DQN,value_based_rl,135169,50,1500 episodes; reduced budget,,,2.98,single-env off-policy training; wall-clock not isolated-measured and not directly comparable to 16-parallel methods
+GAT-PPO,autoregressive_rl_hybrid,198434,50,600 episodes; Stage-2 screening budget only,8,,4.38,not advanced to full 3000-episode training; screening checkpoint only
+LC-PPO,autoregressive_rl_hybrid,168194,50,600 episodes; Stage-2 screening budget only,8,,2.79,not advanced to full 3000-episode training; screening checkpoint only
+HCBS-PPO,frontier_batched_rl,171922,~5,3000 episodes on-policy PPO from scratch,2.5,12.5,11.26,~16x faster per episode than autoregressive family (isolated measurement)
+TAGS,frontier_batched_rl_hybrid,202162,~5,3000 episodes on-policy PPO from scratch plus PID-Lagrangian,10,50,10.46,GAT and TCN and PID overhead vs. HCBS-PPO; high seed variance
+DFPS_final,distilled_frontier_hybrid,202162,~5,200 CP-SAT teacher solves one-time plus 20 supervised imitation epochs plus 300 PPO fine-tune episodes,51,55,13.98,one-time CP-SAT teacher generation ~51 min reused across all 5 seeds; each additional seed ~1 min
+Minimal_Distilled,distilled_autoregressive,168194,50,same one-time 200 CP-SAT teacher solves plus 20 supervised imitation epochs plus 300 PPO fine-tune episodes on the unmodified source architecture,51,55,18.89,shares DFPS's one-time teacher cost; autoregressive decision loop gives higher per-scenario latency than DFPS despite fewer parameters
+TAGS_Compliant,frontier_batched_rl_hybrid,202162,~5,compliance-aware Optuna re-tuning (20 trials at 800-episode proxy budget) then 3000 episodes on-policy PPO from scratch at the tuned configuration,12,60,5.86,tuning search cost (20 x 800ep proxy runs) not included in this row; reported separately as a one-time model-selection cost in PROPOSED_METHOD/logs/tune_compliance.log

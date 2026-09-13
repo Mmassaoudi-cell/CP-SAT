@@ -1,0 +1,10 @@
+{
+  "best_value": 11436.528775691706,
+  "best_params": {
+    "lr": 0.00027171223914393763,
+    "entropy_coef": 0.04537013471398587,
+    "clip_range": 0.17946019869724686,
+    "hidden_size": 128,
+    "frontier_max": 16
+  }
+}

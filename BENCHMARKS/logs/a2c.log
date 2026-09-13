@@ -1,0 +1,15 @@
+{"algorithm": "a2c", "episodes": 192, "update": 10, "mean_system_cost_100": 12129.856927734376}
+{"algorithm": "a2c", "episodes": 400, "update": 20, "mean_system_cost_100": 12060.524306640622}
+{"algorithm": "a2c", "episodes": 608, "update": 30, "mean_system_cost_100": 11995.920302734376}
+{"algorithm": "a2c", "episodes": 816, "update": 40, "mean_system_cost_100": 11981.350173828127}
+{"algorithm": "a2c", "episodes": 1024, "update": 50, "mean_system_cost_100": 11979.652210937498}
+{"algorithm": "a2c", "episodes": 1216, "update": 60, "mean_system_cost_100": 12052.704897460937}
+{"algorithm": "a2c", "episodes": 1424, "update": 70, "mean_system_cost_100": 11961.525339843747}
+{"algorithm": "a2c", "episodes": 1632, "update": 80, "mean_system_cost_100": 11937.878463867188}
+{"algorithm": "a2c", "episodes": 1840, "update": 90, "mean_system_cost_100": 11938.300699218747}
+{"algorithm": "a2c", "episodes": 2048, "update": 100, "mean_system_cost_100": 11959.025612304687}
+{"algorithm": "a2c", "episodes": 2240, "update": 110, "mean_system_cost_100": 11933.203013671875}
+{"algorithm": "a2c", "episodes": 2448, "update": 120, "mean_system_cost_100": 11959.148086914061}
+{"algorithm": "a2c", "episodes": 2656, "update": 130, "mean_system_cost_100": 11974.797942382815}
+{"algorithm": "a2c", "episodes": 2864, "update": 140, "mean_system_cost_100": 12001.227693359373}
+{"checkpoint": "BENCHMARKS\\results\\a2c_seed2026_3000ep.pt", "episodes": 3000, "n_params": 168194, "device": "cuda"}

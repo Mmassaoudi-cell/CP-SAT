@@ -1,0 +1,22 @@
+RUN screen_gat_ppo_seed2026
+DONE screen_gat_ppo_seed2026
+SKIP screen_lc_ppo_seed2026 (exists)
+SKIP screen_hcbs_ppo_seed2026 (exists)
+SKIP screen_tags_seed2026 (exists)
+RUN screen_gat_ppo_seed7
+DONE screen_gat_ppo_seed7
+RUN screen_lc_ppo_seed7
+DONE screen_lc_ppo_seed7
+RUN screen_hcbs_ppo_seed7
+DONE screen_hcbs_ppo_seed7
+RUN screen_tags_seed7
+DONE screen_tags_seed7
+RUN screen_gat_ppo_seed42
+DONE screen_gat_ppo_seed42
+RUN screen_lc_ppo_seed42
+DONE screen_lc_ppo_seed42
+RUN screen_hcbs_ppo_seed42
+DONE screen_hcbs_ppo_seed42
+RUN screen_tags_seed42
+DONE screen_tags_seed42
+ALL_SCREENING_RUNS_COMPLETE

@@ -1,0 +1,4 @@
+{"candidate": "lc_ppo", "episodes": 192, "update": 10, "mean_system_cost_100": 12693.236416992186}
+{"candidate": "lc_ppo", "episodes": 400, "update": 20, "mean_system_cost_100": 12729.235363281252}
+{"candidate": "lc_ppo", "episodes": 608, "update": 30, "mean_system_cost_100": 12779.671758789063}
+{"checkpoint": "PROPOSED_METHOD\\results\\screen_lc_ppo_seed7.pt", "episodes": 600, "updates": 30, "n_params": 168194, "device": "cuda"}

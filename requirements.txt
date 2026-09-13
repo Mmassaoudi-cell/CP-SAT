@@ -1,0 +1,22 @@
+torch>=2.4
+numpy>=2.0
+pandas>=2.2
+scipy>=1.13
+optuna>=4.0
+matplotlib>=3.9
+ortools>=9.10
+pyyaml>=6.0
+
+# Exact versions used to produce the results in this repository (2026-09-02):
+# torch==2.12.0.dev20260326+cu128 (CUDA build; a CPU-only build works but training will be slower)
+# numpy==2.4.1
+# pandas==2.3.3
+# scipy==1.16.3
+# optuna==4.9.0
+# matplotlib==3.10.8
+# ortools==9.15.6755
+# pyyaml==6.0.3
+#
+# LaTeX (for manuscript compilation): any TeX distribution providing the IEEEtran class
+# (this repository used MiKTeX 25.12 with pdflatex; texlive-full or a similar distribution
+# with IEEEtran, booktabs, and amsmath also works).

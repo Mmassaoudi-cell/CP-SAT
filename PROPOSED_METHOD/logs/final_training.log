@@ -1,0 +1,11 @@
+{"candidate": "hcbs_ppo", "seed": 2026, "checkpoint": "PROPOSED_METHOD\\results\\final_hcbs_ppo_seed2026_3000ep.pt", "n_params": 171922, "updates": 15}
+{"candidate": "hcbs_ppo", "seed": 7, "checkpoint": "PROPOSED_METHOD\\results\\final_hcbs_ppo_seed7_3000ep.pt", "n_params": 171922, "updates": 15}
+{"candidate": "hcbs_ppo", "seed": 42, "checkpoint": "PROPOSED_METHOD\\results\\final_hcbs_ppo_seed42_3000ep.pt", "n_params": 171922, "updates": 15}
+{"candidate": "hcbs_ppo", "seed": 123, "checkpoint": "PROPOSED_METHOD\\results\\final_hcbs_ppo_seed123_3000ep.pt", "n_params": 171922, "updates": 15}
+{"candidate": "hcbs_ppo", "seed": 777, "checkpoint": "PROPOSED_METHOD\\results\\final_hcbs_ppo_seed777_3000ep.pt", "n_params": 171922, "updates": 15}
+{"candidate": "tags", "seed": 2026, "checkpoint": "PROPOSED_METHOD\\results\\final_tags_seed2026_3000ep.pt", "n_params": 59634, "updates": 21}
+{"candidate": "tags", "seed": 7, "checkpoint": "PROPOSED_METHOD\\results\\final_tags_seed7_3000ep.pt", "n_params": 59634, "updates": 21}
+{"candidate": "tags", "seed": 42, "checkpoint": "PROPOSED_METHOD\\results\\final_tags_seed42_3000ep.pt", "n_params": 59634, "updates": 21}
+{"candidate": "tags", "seed": 123, "checkpoint": "PROPOSED_METHOD\\results\\final_tags_seed123_3000ep.pt", "n_params": 59634, "updates": 21}
+{"candidate": "tags", "seed": 777, "checkpoint": "PROPOSED_METHOD\\results\\final_tags_seed777_3000ep.pt", "n_params": 59634, "updates": 21}
+DONE_FINAL_TRAINING

@@ -1,0 +1,116 @@
+# FINAL_MODEL_CONFIG.yaml
+# Frozen after Stage 4 (validation-only) final model selection. Selected model:
+# "Distilled Frontier-Priority Scheduler" (DFPS) -- see MODEL_SELECTION_REPORT.md
+# for the full selection rationale. From this point forward the architecture,
+# training procedure, and hyperparameters below are FROZEN: no redesign based
+# on TEST-split performance is permitted.
+
+model:
+  name: distilled_frontier_priority_scheduler
+  short_name: DFPS
+  architecture: FrontierMaskedAttentionActorCritic
+  use_topology: true       # 1-layer multi-head neighbor-attention encoder (PROPOSED_METHOD/src/topology.py)
+  use_horizon: true        # dilated causal-conv horizon encoder + prefix-sum action features (PROPOSED_METHOD/src/temporal.py)
+  hidden_size: 128
+  attention_heads: 8
+  frontier_max: 16
+  n_datacenters: 3
+  horizon: 96
+  task_feature_dim: 12
+  action_feature_dim: 10
+  # n_params measured empirically at training time (PROPOSED_METHOD/results/final_distilled_seed*.pt): 202,162
+
+training_procedure:
+  stage_1_teacher_generation:
+    method: CP-SAT (OR-Tools), exact/near-exact MILP formulation of the identical constraint
+      set as the environment (BENCHMARKS/src/milp_cpsat.py)
+    scenarios: 200 training-split scenarios (seeds 1000-1199), from DATA_SPLIT_MANIFEST.csv train block
+    time_limit_per_scenario_s: 15.0
+    solver_workers: 8
+    outcome: 102 OPTIMAL, 98 FEASIBLE (time-limited best-found), 0 INFEASIBLE
+  stage_2_imitation:
+    objective: cross-entropy over each valid frontier slot's chosen (dc, start) index, against
+      the CP-SAT teacher's assignment, replayed through FrontierSchedulingEnvironment
+      (use_topology=true)
+    scenarios_used: 199 of 200 (1 skipped: CP-SAT integer-rounded demands made its schedule
+      infeasible-by-a-hair against the environment's exact float capacity check on replay)
+    samples: 995 (one per decision epoch per scenario)
+    epochs: 20
+    batch_size: 64
+    optimizer: Adam, lr=3e-4
+    grad_clip_norm: 1.0
+    final_top1_slot_accuracy: ~0.733 (exact-slot match against teacher, out of up to 288 choices per task)
+  stage_3_rl_finetune:
+    objective: PPO (clipped surrogate) fine-tune directly on task reward (electricity cost +
+      PID-Lagrangian carbon penalty), starting from the Stage-2 imitation weights
+    episodes: 300
+    parallel_envs: 16
+    rollout_steps: 64
+    update_epochs: 4
+    minibatch_size: 128
+    actor_learning_rate: 0.0001
+    entropy_coefficient: 0.2
+    clip_range: 0.2
+    discount_factor: 0.99
+    gae_lambda: 0.9
+    gradient_clip: 0.5
+    note: a longer 1500-episode fine-tune was tried and evaluated on validation; it did not
+      improve system cost (11316.6 vs. 11229.6) and only marginally reduced emissions
+      (10724.1 vs. 10851.5 kg, still not quota-compliant) -- 300 episodes was retained as the
+      frozen choice on efficiency grounds (nearly 5x less fine-tuning compute for a better
+      validation cost).
+
+environment_and_data:
+  simulator: SOURCE_METHOD_REPRODUCTION-derived synthetic scenario generator
+    (SOURCE_METHOD_REPRODUCTION/src/scenario.py), documented as a synthetic reconstruction in
+    DATA_AUDIT.md -- not author-released data (none exists for the source paper).
+  datacenters: 3
+  horizon_slots: 96
+  interval_hours: 0.25
+  workloads_per_scenario: 10
+  subtasks_per_scenario: 50
+  dc_capacity_kw: [1800.0, 1800.0, 1800.0]
+  dc_base_kw: [240.0, 240.0, 240.0]
+  bandwidth_capacity_mbps: [6500.0, 6500.0, 6500.0]
+  carbon_price_per_kg: 0.10
+  carbon_quota_kg: 9500.0   # tightened from the source-reproduction default (13,240 kg, never binding);
+    # decided from validation-distribution diagnostics before candidate screening, see MODEL_SELECTION_REPORT.md
+  remote_migration_slots: 1
+  lagrangian_pid: {kp: 3.0, ki: 0.3, kd: 0.0, lambda_max: 1.5}  # error normalized by quota; see
+    # SOURCE_WEAKNESS_ANALYSIS.md / MODEL_SELECTION_REPORT.md for the raw-kg saturation bug this replaced
+  split:
+    train_scenarios: 600 (seeds 1000-1599)
+    validation_scenarios: 100 (seeds 2000-2099)
+    test_scenarios: 100 (seeds 3000-3099)
+    manifest: DATA_SPLIT_MANIFEST.csv
+    leakage_control: disjoint scenario-seed blocks; CP-SAT teacher labels drawn only from the
+      train block; all preprocessing (none required beyond scenario generation) uses no
+      cross-split information.
+
+seeds_for_final_statistical_reporting: [2026, 7, 42, 123, 777]
+
+model_selection_metric:
+  primary: mean system_cost on the 100-scenario validation split (lower is better)
+  secondary: carbon-quota compliance, decision latency, parameter count, training compute
+
+selection_summary:
+  validation_system_cost_mean: 11229.65
+  validation_system_cost_std: 195.99
+  validation_carbon_emissions_kg_mean: 10851.45
+  validation_carbon_emissions_kg_std: 264.83
+  validation_mean_decision_latency_ms: 13.98
+  seed_to_seed_system_cost_range: [11227.55, 11231.60]   # extremely low seed variance vs.
+    # from-scratch RL alternatives (HCBS-PPO, TAGS), see MODEL_SELECTION_REPORT.md
+
+known_limitation_frozen_in: DFPS does not achieve carbon-quota compliance on average (mean
+  10,851 kg emissions vs. a 9,500 kg quota); this is reported honestly rather than hidden.
+  TAGS (same architecture, trained from scratch with the same corrected PID-Lagrangian) is
+  retained as a secondary, quota-aware operating point in the final manuscript's Pareto/
+  robustness analysis, at a documented, real cost premium (see MODEL_SELECTION_REPORT.md).
+
+early_stopping: none (fixed-budget training at every stage; budgets themselves were the tuned
+  quantity, chosen via Stage 3 validation-only screening, not via early stopping on any metric)
+augmentation: none
+class_balancing: not applicable (sequential scheduling task, not classification)
+thresholds: feasibility/capacity constraints only (hard constraints, not tunable thresholds);
+  no soft decision threshold is used

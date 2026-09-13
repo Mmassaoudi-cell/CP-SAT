@@ -1,0 +1,1 @@
+{"checkpoint": "PROPOSED_METHOD\\results\\screen_tags_seed42.pt", "episodes": 600, "updates": 3, "n_params": 202162, "device": "cuda"}

@@ -1,0 +1,8 @@
+{
+  "price_cv_real": 0.5399463636341947,
+  "price_cv_synthetic": 0.3653784258323609,
+  "price_lag96_autocorr_real": 0.8451053031141903,
+  "price_lag96_autocorr_synthetic_DC1_series": 0.9571473981332318,
+  "renewable_lag96_autocorr_real_mean": 0.26918513571832337,
+  "cef_lag96_autocorr_synthetic_DC1_series": 0.9385754929482216
+}

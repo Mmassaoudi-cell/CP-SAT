@@ -1,0 +1,2 @@
+benchmark,verdict,holm_significant,n,mean_proposed,mean_baseline,mean_diff,pct_improvement,t_stat,t_pvalue,wilcoxon_stat,wilcoxon_pvalue,cohens_d,significant_alpha_0.05_uncorrected
+minimal_distilled,tie,False,100,11229.650014558569,11224.701451757814,-4.948562800754953,-0.04408636454183819,-1.977072053277478,0.05081468536480475,2148.0,0.19488989682868574,-0.19770720532774777,False

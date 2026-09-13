@@ -1,0 +1,4 @@
+RUN lr3e-4
+RUN lr3e-5
+RUN default_lr_600ep_for_fair_comparison
+ALL_TUNING_SENSITIVITY_DONE

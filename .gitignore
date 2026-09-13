@@ -1,0 +1,35 @@
+# Figures and rendered images (excluded from this repository by design)
+*.png
+*.jpg
+*.jpeg
+
+# Compiled/rendered documents (paper PDFs, not source code)
+*.pdf
+
+# LaTeX compile artifacts
+*.aux
+*.toc
+*.bbl
+*.blg
+MANUSCRIPT/*.log
+MANUSCRIPT/rerun*.log
+output/revised_manuscript/*.log
+output/revised_manuscript/*.out
+
+# Generated LaTeX result tables for the paper
+ANALYSIS/tables/
+
+# Packaged/archived paper outputs (contain figures/tables)
+*.zip
+
+# Scratch / non-canonical rendering and review-artifact directories
+tmp/
+output/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# OS junk
+.DS_Store
+Thumbs.db

@@ -1,0 +1,70 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 190, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 177, in main
+    samples = collect_dataset(config, Path(args.teacher_dir))
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 52, in collect_dataset
+    obs, _, _, _ = env.step(action)
+                   ~~~~~~~~^^^^^^^^
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\SOURCE_METHOD_REPRODUCTION\src\environment.py", line 160, in step
+    raise ValueError(f"Masked action {action} selected")
+ValueError: Masked action 145 selected
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 190, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 177, in main
+    samples = collect_dataset(config, Path(args.teacher_dir))
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 52, in collect_dataset
+    obs, _, _, _ = env.step(action)
+                   ~~~~~~~~^^^^^^^^
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\SOURCE_METHOD_REPRODUCTION\src\environment.py", line 160, in step
+    raise ValueError(f"Masked action {action} selected")
+ValueError: Masked action 145 selected
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 190, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 177, in main
+    samples = collect_dataset(config, Path(args.teacher_dir))
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 52, in collect_dataset
+    obs, _, _, _ = env.step(action)
+                   ~~~~~~~~^^^^^^^^
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\SOURCE_METHOD_REPRODUCTION\src\environment.py", line 160, in step
+    raise ValueError(f"Masked action {action} selected")
+ValueError: Masked action 145 selected
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 190, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 177, in main
+    samples = collect_dataset(config, Path(args.teacher_dir))
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 52, in collect_dataset
+    obs, _, _, _ = env.step(action)
+                   ~~~~~~~~^^^^^^^^
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\SOURCE_METHOD_REPRODUCTION\src\environment.py", line 160, in step
+    raise ValueError(f"Masked action {action} selected")
+ValueError: Masked action 145 selected
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 190, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 177, in main
+    samples = collect_dataset(config, Path(args.teacher_dir))
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\PROPOSED_METHOD\src\distill_minimal.py", line 52, in collect_dataset
+    obs, _, _, _ = env.step(action)
+                   ~~~~~~~~^^^^^^^^
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 31\SOURCE_METHOD_REPRODUCTION\src\environment.py", line 160, in step
+    raise ValueError(f"Masked action {action} selected")
+ValueError: Masked action 145 selected

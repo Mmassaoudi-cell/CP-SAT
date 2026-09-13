@@ -1,0 +1,22 @@
+{"progress": 10, "of": 200, "status": "FEASIBLE"}
+{"progress": 20, "of": 200, "status": "OPTIMAL"}
+{"progress": 30, "of": 200, "status": "OPTIMAL"}
+{"progress": 40, "of": 200, "status": "FEASIBLE"}
+{"progress": 50, "of": 200, "status": "OPTIMAL"}
+{"progress": 60, "of": 200, "status": "OPTIMAL"}
+{"progress": 70, "of": 200, "status": "FEASIBLE"}
+{"progress": 80, "of": 200, "status": "OPTIMAL"}
+{"progress": 90, "of": 200, "status": "FEASIBLE"}
+{"progress": 100, "of": 200, "status": "OPTIMAL"}
+{"progress": 110, "of": 200, "status": "FEASIBLE"}
+{"progress": 120, "of": 200, "status": "FEASIBLE"}
+{"progress": 130, "of": 200, "status": "FEASIBLE"}
+{"progress": 140, "of": 200, "status": "FEASIBLE"}
+{"progress": 150, "of": 200, "status": "FEASIBLE"}
+{"progress": 160, "of": 200, "status": "FEASIBLE"}
+{"progress": 170, "of": 200, "status": "OPTIMAL"}
+{"progress": 180, "of": 200, "status": "OPTIMAL"}
+{"progress": 190, "of": 200, "status": "FEASIBLE"}
+{"progress": 200, "of": 200, "status": "FEASIBLE"}
+{"done": true, "n_scenarios": 200, "out_dir": "PROPOSED_METHOD\\results\\teacher_labels"}
+DONE_TEACHER_LABELS

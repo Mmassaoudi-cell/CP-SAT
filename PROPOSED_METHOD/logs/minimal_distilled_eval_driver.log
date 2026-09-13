@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<string>", line 10, in <module>
+    payload = torch.load('PROPOSED_METHOD/results/minimal_distilled_seed*.pt', map_location=device, weights_only=False)
+  File "C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\torch\serialization.py", line 1530, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\torch\serialization.py", line 795, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\torch\serialization.py", line 776, in __init__
+    super().__init__(open(name, mode))  # noqa: SIM115
+                     ~~~~^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument: 'PROPOSED_METHOD/results/minimal_distilled_seed*.pt'
+ALL_DONE

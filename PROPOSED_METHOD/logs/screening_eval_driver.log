@@ -1,0 +1,13 @@
+EVAL screen_gat_ppo_seed2026 candidate=gat_ppo
+EVAL screen_gat_ppo_seed42 candidate=gat_ppo
+EVAL screen_gat_ppo_seed7 candidate=gat_ppo
+EVAL screen_hcbs_ppo_seed2026 candidate=hcbs_ppo
+EVAL screen_hcbs_ppo_seed42 candidate=hcbs_ppo
+EVAL screen_hcbs_ppo_seed7 candidate=hcbs_ppo
+EVAL screen_lc_ppo_seed2026 candidate=lc_ppo
+EVAL screen_lc_ppo_seed42 candidate=lc_ppo
+EVAL screen_lc_ppo_seed7 candidate=lc_ppo
+EVAL screen_tags_seed2026 candidate=tags
+EVAL screen_tags_seed42 candidate=tags
+EVAL screen_tags_seed7 candidate=tags
+ALL_SCREENING_EVAL_COMPLETE

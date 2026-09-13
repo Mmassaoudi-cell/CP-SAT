@@ -1,0 +1,15 @@
+{"candidate": "tags", "episodes": 1456, "update": 10, "mean_system_cost_100": 12602.500365355001}
+{"candidate": "tags", "episodes": 2912, "update": 20, "mean_system_cost_100": 12662.517979604025}
+{"checkpoint": "PROPOSED_METHOD\\results\\final_tags_compliant_seed2026_3000ep.pt", "episodes": 3000, "updates": 21, "n_params": 202162, "device": "cuda"}
+{"candidate": "tags", "episodes": 1456, "update": 10, "mean_system_cost_100": 12602.655697556296}
+{"candidate": "tags", "episodes": 2912, "update": 20, "mean_system_cost_100": 12527.305451639673}
+{"checkpoint": "PROPOSED_METHOD\\results\\final_tags_compliant_seed7_3000ep.pt", "episodes": 3000, "updates": 21, "n_params": 202162, "device": "cuda"}
+{"candidate": "tags", "episodes": 1456, "update": 10, "mean_system_cost_100": 12562.33827960142}
+{"candidate": "tags", "episodes": 2912, "update": 20, "mean_system_cost_100": 12647.393385807296}
+{"checkpoint": "PROPOSED_METHOD\\results\\final_tags_compliant_seed42_3000ep.pt", "episodes": 3000, "updates": 21, "n_params": 202162, "device": "cuda"}
+{"candidate": "tags", "episodes": 1456, "update": 10, "mean_system_cost_100": 12459.784511198724}
+{"candidate": "tags", "episodes": 2912, "update": 20, "mean_system_cost_100": 12513.071116955944}
+{"checkpoint": "PROPOSED_METHOD\\results\\final_tags_compliant_seed123_3000ep.pt", "episodes": 3000, "updates": 21, "n_params": 202162, "device": "cuda"}
+{"candidate": "tags", "episodes": 1456, "update": 10, "mean_system_cost_100": 12595.734172018061}
+{"candidate": "tags", "episodes": 2912, "update": 20, "mean_system_cost_100": 12550.077378408567}
+{"checkpoint": "PROPOSED_METHOD\\results\\final_tags_compliant_seed777_3000ep.pt", "episodes": 3000, "updates": 21, "n_params": 202162, "device": "cuda"}

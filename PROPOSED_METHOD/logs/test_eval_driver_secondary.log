@@ -1,0 +1,13 @@
+TAGS v2 (5 seeds) on TEST
+done final_tags_seed123_3000ep
+done final_tags_seed2026_3000ep
+done final_tags_seed42_3000ep
+done final_tags_seed777_3000ep
+done final_tags_seed7_3000ep
+HCBS-PPO (5 seeds) on TEST
+done final_hcbs_ppo_seed123_3000ep
+done final_hcbs_ppo_seed2026_3000ep
+done final_hcbs_ppo_seed42_3000ep
+done final_hcbs_ppo_seed777_3000ep
+done final_hcbs_ppo_seed7_3000ep
+ALL_SECONDARY_TEST_EVAL_DONE

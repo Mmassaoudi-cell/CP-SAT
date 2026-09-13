@@ -1,0 +1,15 @@
+{"algorithm": "mlp_ppo", "episodes": 192, "update": 10, "mean_system_cost_100": 12009.88687402344}
+{"algorithm": "mlp_ppo", "episodes": 400, "update": 20, "mean_system_cost_100": 12017.7991328125}
+{"algorithm": "mlp_ppo", "episodes": 608, "update": 30, "mean_system_cost_100": 11984.013431640627}
+{"algorithm": "mlp_ppo", "episodes": 816, "update": 40, "mean_system_cost_100": 12035.653379882817}
+{"algorithm": "mlp_ppo", "episodes": 1024, "update": 50, "mean_system_cost_100": 11967.096730468747}
+{"algorithm": "mlp_ppo", "episodes": 1216, "update": 60, "mean_system_cost_100": 12054.135071289062}
+{"algorithm": "mlp_ppo", "episodes": 1424, "update": 70, "mean_system_cost_100": 11949.888380859375}
+{"algorithm": "mlp_ppo", "episodes": 1632, "update": 80, "mean_system_cost_100": 11920.340483398437}
+{"algorithm": "mlp_ppo", "episodes": 1840, "update": 90, "mean_system_cost_100": 12023.833400390626}
+{"algorithm": "mlp_ppo", "episodes": 2048, "update": 100, "mean_system_cost_100": 11988.169075195314}
+{"algorithm": "mlp_ppo", "episodes": 2240, "update": 110, "mean_system_cost_100": 11910.205828125}
+{"algorithm": "mlp_ppo", "episodes": 2448, "update": 120, "mean_system_cost_100": 11993.350665039065}
+{"algorithm": "mlp_ppo", "episodes": 2656, "update": 130, "mean_system_cost_100": 11989.599313476561}
+{"algorithm": "mlp_ppo", "episodes": 2864, "update": 140, "mean_system_cost_100": 11959.946041992185}
+{"checkpoint": "BENCHMARKS\\results\\mlp_ppo_seed2026_3000ep.pt", "episodes": 3000, "n_params": 102146, "device": "cuda"}

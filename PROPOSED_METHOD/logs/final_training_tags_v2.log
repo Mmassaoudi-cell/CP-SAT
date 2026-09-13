@@ -1,0 +1,6 @@
+{"candidate": "tags", "seed": 2026, "checkpoint": "PROPOSED_METHOD\\results\\final_tags_seed2026_3000ep.pt", "n_params": 434802, "updates": 15}
+{"candidate": "tags", "seed": 7, "checkpoint": "PROPOSED_METHOD\\results\\final_tags_seed7_3000ep.pt", "n_params": 434802, "updates": 15}
+{"candidate": "tags", "seed": 42, "checkpoint": "PROPOSED_METHOD\\results\\final_tags_seed42_3000ep.pt", "n_params": 434802, "updates": 15}
+{"candidate": "tags", "seed": 123, "checkpoint": "PROPOSED_METHOD\\results\\final_tags_seed123_3000ep.pt", "n_params": 434802, "updates": 15}
+{"candidate": "tags", "seed": 777, "checkpoint": "PROPOSED_METHOD\\results\\final_tags_seed777_3000ep.pt", "n_params": 434802, "updates": 15}
+DONE_FINAL_TRAINING_TAGS_V2
